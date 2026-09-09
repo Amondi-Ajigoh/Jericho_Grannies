@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import heroImage from '../assets/hero.png'
 
 function HomePage() {
   return (
@@ -53,9 +54,12 @@ function HomePage() {
 
             <div className="col-lg-5">
               <div className="hero-visual">
-                <div className="football-badge">
-                  <i className="bi bi-trophy-fill"></i>
-                  <span>JG</span>
+                <div className="hero-image-wrap">
+                  <img
+                    src={heroImage}
+                    alt="Jericho Grannies football"
+                    className="hero-image"
+                  />
                 </div>
 
                 <div className="hero-card hero-card-top">

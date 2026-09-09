@@ -239,6 +239,26 @@
   max-width: 440px;
 }
 
+.hero-image-wrap {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  left: 50%;
+  width: 343px;
+  height: 361px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 28px 35px rgba(0, 0, 0, .28));
+}
+
 .football-badge {
   position: absolute;
   top: 65px;
@@ -727,7 +747,7 @@
     height: 360px;
   }
 
-  .football-badge {
+.football-badge {
     width: 210px;
     height: 210px;
     top: 50px;
@@ -1543,319 +1563,6 @@
 
   .match-info-panel .btn {
     grid-column: auto;
-  }
-}
-
-/* Stories page */
-.stories-hero {
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-}
-
-.stories-hero h1 em {
-  color: var(--lime);
-  font-style: normal;
-}
-
-.stories-intro {
-  background: var(--cream);
-}
-
-.stories-intro-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 70px;
-  align-items: end;
-}
-
-.stories-intro h2 {
-  max-width: 760px;
-  margin: 14px 0 0;
-  color: var(--green-950);
-  font-size: clamp(3rem, 6vw, 6rem);
-  line-height: 0.92;
-  font-weight: 800;
-  letter-spacing: -0.06em;
-}
-
-.stories-intro h2 span {
-  display: block;
-  color: var(--green-500);
-}
-
-.stories-intro-grid > p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.85;
-}
-
-.featured-story-section {
-  background: var(--white);
-}
-
-.featured-story {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  min-height: 480px;
-  overflow: hidden;
-  border-radius: 28px;
-  background: var(--green-950);
-  color: var(--white);
-}
-
-.featured-story-visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 430px;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at center, rgba(198, 217, 87, 0.2), transparent 40%),
-    var(--green-800);
-}
-
-.featured-story-visual::before,
-.featured-story-visual::after {
-  content: "";
-  position: absolute;
-  border: 1px solid rgba(198, 217, 87, 0.2);
-  border-radius: 50%;
-}
-
-.featured-story-visual::before {
-  width: 340px;
-  height: 340px;
-}
-
-.featured-story-visual::after {
-  width: 520px;
-  height: 520px;
-}
-
-.featured-story-mark {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 135px;
-  height: 135px;
-  border-radius: 50%;
-  background: var(--lime);
-  color: var(--green-950);
-  font-size: 3rem;
-}
-
-.featured-story-visual > span {
-  position: absolute;
-  right: 30px;
-  bottom: 25px;
-  z-index: 3;
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 4rem;
-  font-weight: 900;
-  letter-spacing: -0.08em;
-}
-
-.featured-story-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 70px;
-}
-
-.featured-story-content h2 {
-  max-width: 720px;
-  margin: 14px 0 22px;
-  font-size: clamp(2.5rem, 5vw, 4.8rem);
-  line-height: 0.96;
-  font-weight: 800;
-  letter-spacing: -0.055em;
-}
-
-.featured-story-content > p {
-  max-width: 620px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.8;
-}
-
-.story-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 35px;
-}
-
-.story-meta span {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255, 255, 255, 0.52);
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.story-meta i {
-  color: var(--lime);
-}
-
-.story-categories-section {
-  background: var(--cream);
-}
-
-.story-category-card {
-  min-height: 330px;
-  padding: 32px;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: var(--white);
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.story-category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(12, 33, 23, 0.08);
-}
-
-.story-category-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.story-category-top > span {
-  color: rgba(23, 32, 24, 0.28);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-.story-category-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  background: var(--green-950);
-  color: var(--lime);
-  font-size: 1.35rem;
-}
-
-.story-category-card h3 {
-  margin: 65px 0 12px;
-  color: var(--green-950);
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-}
-
-.story-category-card p {
-  margin: 0 0 22px;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.story-coming-soon {
-  display: inline-flex;
-  padding: 7px 11px;
-  border-radius: 999px;
-  background: rgba(198, 217, 87, 0.18);
-  color: var(--green-800);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.stories-cta {
-  padding: 100px 0;
-  background: var(--white);
-}
-
-.stories-cta-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-  padding: 65px;
-  border-radius: 28px;
-  background: var(--green-900);
-  color: var(--white);
-}
-
-.stories-cta-panel h2 {
-  max-width: 720px;
-  margin: 12px 0 15px;
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  line-height: 0.94;
-  font-weight: 800;
-  letter-spacing: -0.055em;
-}
-
-.stories-cta-panel h2 span {
-  color: var(--lime);
-}
-
-.stories-cta-panel p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.64);
-  line-height: 1.7;
-}
-
-.stories-cta-panel .btn {
-  flex-shrink: 0;
-}
-
-@media (max-width: 991px) {
-  .stories-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .featured-story {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-story-visual {
-    min-height: 300px;
-  }
-
-  .stories-cta-panel {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 575px) {
-  .stories-hero {
-    min-height: 430px;
-  }
-
-  .featured-story-content {
-    padding: 38px 28px;
-  }
-
-  .featured-story-mark {
-    width: 105px;
-    height: 105px;
-    font-size: 2.4rem;
-  }
-
-  .story-category-card {
-    min-height: 300px;
-  }
-
-  .stories-cta {
-    padding: 70px 0;
-  }
-
-  .stories-cta-panel {
-    padding: 35px 28px;
   }
 }
 
